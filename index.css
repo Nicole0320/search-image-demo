@@ -1,0 +1,149 @@
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+
+#declaration{
+    margin: 5px;
+    color: #777;
+    font-size: 14px;
+}
+
+#declaration>a{
+    text-decoration: none;
+    color: #599;
+    font-style: italic;
+}
+
+#declaration>a:hover{
+    color: #9cc;
+}
+
+#search{
+    width: 510px;
+    margin: 10px auto;
+    font-size: 18px;
+    color: #333;
+}
+
+#search>input[type="text"]{
+    width: 400px;
+    margin: 5px;
+    padding: 0.5em;
+    border: 1px solid #999;
+    border-radius: 2px;
+}
+
+#search>button{
+    margin: 5px;
+    padding: 0.5em 0.8em;
+    border: 1px solid #999;
+    background-color: #eee;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#search>button:hover{
+    color: #fff;
+    background-color: rgb(77,144,254);
+    border-color: rgb(77,144,254);
+}
+
+.row::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.container>.row{
+    /*background: pink;*/
+    display: block;
+    margin-left: -5px;
+}
+
+.container>.row>li{
+    float: left;
+    margin: 4px 0 4px 5px;
+}
+
+.container>.row>li>a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.container>.row>li img{
+    display: block;
+}
+
+#more{
+    height: 10px;
+}
+
+#go-top{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    color: #333;
+}
+
+#go-top li{
+    border: 1px solid #ccc;
+    background: #fff;
+    border-bottom: none;
+    position: relative;
+}
+
+#go-top li:last-child{
+    border-bottom: 1px solid #ccc;
+}
+
+#go-top li>p{
+    position: absolute;
+    top: 4px;
+    right: 110%;
+    background: #fff;
+    color: rgb(77,144,254);
+    border: 1px solid rgb(77,144,254);
+    padding: 5px 8px;
+    border-radius: 3px;
+    width: 66px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#go-top li>p::after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top: 5px;
+    right: -5px;
+    border-top: 1px solid rgb(77,144,254);
+    border-right: 1px solid rgb(77,144,254);
+    background-color: #fff;
+    transform: rotate(45deg);
+}
+
+#go-top li:hover{
+    color: #fff;
+    background-color: rgb(77,144,254);
+    border-color: rgb(77,144,254);
+}
+
+#go-top li:hover>p{
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0);
+    transition: all 1s;
+}
+
+#go-top a{
+    display: block;
+    text-decoration: none;
+    font-size: 30px;
+    color: inherit;
+    padding: 8px 14px;
+}
